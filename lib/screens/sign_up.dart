@@ -48,6 +48,7 @@ class _SignUpState extends State<SignUp> {
             TextIconContainer(
               hintText: 'Password',
               icon: Icons.lock_rounded,
+              hideText: true,
               onChanged: (String value) {
                 password = value;
               },

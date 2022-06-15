@@ -50,6 +50,7 @@ class _LoginState extends State<Login> {
             TextIconContainer(
               hintText: 'Password',
               icon: Icons.lock_rounded,
+              hideText: true,
               onChanged: (String value) {
                 password = value;
               },

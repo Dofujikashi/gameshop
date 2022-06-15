@@ -6,6 +6,7 @@ class TextIconContainer extends StatelessWidget {
   final void Function(String value) onChanged;
   final TextInputType inputType;
   final Color? iconColor;
+  final bool? hideText;
 
   const TextIconContainer({
     Key? key,
@@ -13,6 +14,7 @@ class TextIconContainer extends StatelessWidget {
     required this.icon,
     required this.onChanged,
     required this.inputType,
+    this.hideText,
     this.iconColor,
   }) : super(key: key);
 
@@ -27,6 +29,7 @@ class TextIconContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: TextField(
+        obscureText: hideText == null ? false : true,
         keyboardType: inputType,
         onChanged: onChanged,
         cursorColor: Colors.white,
